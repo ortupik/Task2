@@ -33,6 +33,10 @@ public class Transfer {
 		this.destinationAccount = destinationAccount;
 		this.amount = amount;
 	}
+	
+	public Transfer() {
+		
+	}
 
 	public Account getSourceAccount() {
 		return sourceAccount;

@@ -53,6 +53,9 @@ public class TransferServiceIntegrationTest {
         transferService.transferMoney(sourceAccount.getId(), destinationAccount.getId(), 500.0);
 
         // Assert
+        sourceAccount = accountService.getAccountById(sourceAccount.getId());
+        destinationAccount = accountService.getAccountById(destinationAccount.getId());
+
         assertEquals(500.0, sourceAccount.getBalance());
         assertEquals(2500.0, destinationAccount.getBalance());
     }
