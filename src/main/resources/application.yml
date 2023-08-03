@@ -1,0 +1,44 @@
+spring:
+  application:
+        name: money-api              
+  devtools:
+      restart:
+          enabled: true
+  logging:
+      level:
+          org:
+              springframework:
+                  security: debug
+                
+  datasource:
+    url: jdbc:mysql://localhost:3306/money-transfer-db
+    username: root
+    password: chowder
+    jpa:
+      hibernate.ddl-auto: update
+      generate-ddl: true
+      show-sql: true  
+  jpa:
+      database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+      database: MYSQL
+      show_sql: true
+      open-in-view: false
+      factory-class: org.springframework.data.envers.repository.support.EnversRevisionRepositoryFactoryBean
+      properties:
+          hibernate.cache.use_second_level_cache: false
+          hibernate.cache.use_query_cache: false
+          hibernate.generate_statistics: true     
+
+liquibase:
+    change-log: classpath:liquibase/db.changelog-master.yaml
+
+
+server:
+    port: 8081
+    eviction-interval-timer-in-ms: 1000
+
+feign:
+  circuitbreaker:
+    enabled: true      
+debug: true
+

@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0009
+      author: chris
+      context: dev
+      createTable:
+        tableName: account
+        columns:
+          - column:
+              - name: id
+              - type: int(11)
+              - autoIncrement: true
+              - constraints:
+                  - nullable: false
+                  - primaryKey: true
+          - column:
+              - name: account_number
+              - type: varchar(100)
+              - constraints:
+                  - nullable: false
+                  - unique: true
+          - column:
+              - name: balance
+              - type: double

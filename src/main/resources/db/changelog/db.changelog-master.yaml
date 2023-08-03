@@ -1,0 +1,13 @@
+databaseChangeLog:
+   - include:
+       - file: /add_account_table.yaml
+       - relativeToChangelogFile: true
+   - include:
+       - file: /add_transfer_table.yaml
+       - relativeToChangelogFile: true
+   - changeSet:
+       id: 0001
+       author: chris
+       context: dev
+       tagDatabase:
+         tag: version_1.0

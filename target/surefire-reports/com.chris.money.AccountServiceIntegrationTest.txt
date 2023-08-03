@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.chris.money.AccountServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 33.973 s <<< FAILURE! - in com.chris.money.AccountServiceIntegrationTest
+testCreateAccount_InvalidRequest_ThrowsException  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected javax.xml.bind.ValidationException to be thrown, but nothing was thrown.
+	at com.chris.money.AccountServiceIntegrationTest.testCreateAccount_InvalidRequest_ThrowsException(AccountServiceIntegrationTest.java:52)
+

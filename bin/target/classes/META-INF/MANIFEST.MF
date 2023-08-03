@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Pchemut
+Build-Jdk: 19.0.2
+Implementation-Title: spring-boot
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.starter
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot/
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0008
+      author: chris
+      context: dev
+      createTable:
+        tableName: transfer
+        columns:
+          - column:
+              - name: id
+              - type: int(11)
+              - autoIncrement: true
+              - constraints:
+                  - nullable: false
+                  - primaryKey: true
+          - column:
+              - name: source_account_id
+              - type: int(11)
+          - column:
+              - name: destination_account_id
+              - type: int(11)
+          - column:
+              - name: amount
+              - type: double
+              
