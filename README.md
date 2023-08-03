@@ -19,7 +19,7 @@ Before running the API, you need to have the following installed on your system:
 
 - Java Development Kit (JDK) 11 or higher
 - Apache Maven
-- PostgreSQL database
+- MySQL database
 
 ## Getting Started
 

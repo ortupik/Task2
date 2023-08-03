@@ -42,3 +42,16 @@ feign:
     enabled: true      
 debug: true
 
+# Actuator Configuration for Prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    export:
+      prometheus:
+        enabled: true
+
