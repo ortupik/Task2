@@ -1,4 +1,4 @@
-package com.chris.money;
+package com.chris.money.services;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

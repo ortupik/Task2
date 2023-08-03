@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.chris.money.AccountServiceIntegrationTest" time="43.005" tests="4" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.chris.money.AccountServiceUnitTest" time="6.781" tests="2" errors="1" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,12 +60,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testCreateAccount_ValidRequest_CreatesAccount" classname="com.chris.money.AccountServiceIntegrationTest" time="0.017"/>
-  <testcase name="testCreateAccount_InvalidRequest_ThrowsException" classname="com.chris.money.AccountServiceIntegrationTest" time="0.008">
-    <failure message="Expected javax.xml.bind.ValidationException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected javax.xml.bind.ValidationException to be thrown, but nothing was thrown.
-	at com.chris.money.AccountServiceIntegrationTest.testCreateAccount_InvalidRequest_ThrowsException(AccountServiceIntegrationTest.java:52)
-</failure>
-    <system-out><![CDATA[
+  <testcase name="testCreateAccount" classname="com.chris.money.AccountServiceUnitTest" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.chris.money.AccountServiceUnitTest.testCreateAccount(AccountServiceUnitTest.java:39)
+</error>
+    <system-out><![CDATA[2023-08-03 22:14:33.711  INFO [money-api,,] 8948 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.chris.money.AccountServiceUnitTest], using SpringBootContextLoader
+2023-08-03 22:14:33.712  INFO [money-api,,] 8948 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.chris.money.AccountServiceUnitTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-08-03 22:14:33.712  INFO [money-api,,] 8948 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.chris.money.AccountServiceUnitTest]: AccountServiceUnitTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-08-03 22:14:33.718  INFO [money-api,,] 8948 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.chris.money.Application for test class com.chris.money.AccountServiceUnitTest
+2023-08-03 22:14:33.721 DEBUG [money-api,,] 8948 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : @TestExecutionListeners is not present for class [com.chris.money.AccountServiceUnitTest]: using defaults.
+2023-08-03 22:14:33.721  INFO [money-api,,] 8948 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-08-03 22:14:33.722  INFO [money-api,,] 8948 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2459db3c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@307bd31f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2ea45459, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10d99dfa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7ab324e6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@143ef384, org.springframework.test.context.transaction.TransactionalTestExecutionListener@18b47bc6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@445e0367, org.springframework.test.context.event.EventPublishingTestExecutionListener@27a99b1e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4468febc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7fb9c7bc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4bc8b617, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2052a51b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@234c32b3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@12799541]
+
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -74,7 +80,7 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.5)
 
-2023-08-03 22:14:13.817  WARN [money-api,,] 8948 --- [           main] ory$DuplicateJsonObjectContextCustomizer : 
+2023-08-03 22:14:34.327  WARN [money-api,,] 8948 --- [           main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -83,25 +89,25 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-08-03 22:14:13.824  INFO [money-api,,] 8948 --- [           main] c.c.money.AccountServiceIntegrationTest  : Starting AccountServiceIntegrationTest using Java 11.0.18 on DESKTOP-L95J095 with PID 8948 (started by Pchemut in C:\Users\Pchemut\Videos\property\money-transfer-api)
-2023-08-03 22:14:13.824  INFO [money-api,,] 8948 --- [           main] c.c.money.AccountServiceIntegrationTest  : No active profile set, falling back to default profiles: default
-2023-08-03 22:14:13.825 DEBUG [money-api,,] 8948 --- [           main] o.s.boot.SpringApplication               : Loading source class com.chris.money.Application
-2023-08-03 22:14:13.829 DEBUG [money-api,,] 8948 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@47fd0905
-2023-08-03 22:14:14.747  INFO [money-api,,] 8948 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-08-03 22:14:14.748 DEBUG [money-api,,] 8948 --- [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.chris.money'. Automatic @Repository and @Entity scanning is enabled.
-2023-08-03 22:14:14.784  INFO [money-api,,] 8948 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
-2023-08-03 22:14:15.074  INFO [money-api,,] 8948 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4d51823e-0e8d-3bcf-907b-b4741f2e22ec
-2023-08-03 22:14:15.744  INFO [money-api,,] 8948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-08-03 22:14:15.750  INFO [money-api,,] 8948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-08-03 22:14:15.787  INFO [money-api,,] 8948 --- [           main] liquibase.changelog                      : Reading from `money-transfer-db`.DATABASECHANGELOG
-2023-08-03 22:14:15.791  INFO [money-api,,] 8948 --- [           main] liquibase.executor                       : Changelog query completed.
+2023-08-03 22:14:34.333  INFO [money-api,,] 8948 --- [           main] com.chris.money.AccountServiceUnitTest   : Starting AccountServiceUnitTest using Java 11.0.18 on DESKTOP-L95J095 with PID 8948 (started by Pchemut in C:\Users\Pchemut\Videos\property\money-transfer-api)
+2023-08-03 22:14:34.333  INFO [money-api,,] 8948 --- [           main] com.chris.money.AccountServiceUnitTest   : No active profile set, falling back to default profiles: default
+2023-08-03 22:14:34.334 DEBUG [money-api,,] 8948 --- [           main] o.s.boot.SpringApplication               : Loading source class com.chris.money.Application
+2023-08-03 22:14:34.340 DEBUG [money-api,,] 8948 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@30c5ce0a
+2023-08-03 22:14:34.869  INFO [money-api,,] 8948 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-03 22:14:34.872 DEBUG [money-api,,] 8948 --- [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.chris.money'. Automatic @Repository and @Entity scanning is enabled.
+2023-08-03 22:14:34.899  INFO [money-api,,] 8948 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2023-08-03 22:14:35.012  INFO [money-api,,] 8948 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4d51823e-0e8d-3bcf-907b-b4741f2e22ec
+2023-08-03 22:14:35.465  INFO [money-api,,] 8948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-08-03 22:14:35.474  INFO [money-api,,] 8948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-08-03 22:14:35.515  INFO [money-api,,] 8948 --- [           main] liquibase.changelog                      : Reading from `money-transfer-db`.DATABASECHANGELOG
+2023-08-03 22:14:35.519  INFO [money-api,,] 8948 --- [           main] liquibase.executor                       : Changelog query completed.
 Database is up to date, no changesets to execute
-2023-08-03 22:14:16.139  INFO [money-api,,] 8948 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-08-03 22:14:16.168  INFO [money-api,,] 8948 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLInnoDBDialect
-2023-08-03 22:14:16.188  INFO [money-api,,] 8948 --- [           main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2023-08-03 22:14:16.305  INFO [money-api,,] 8948 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-08-03 22:14:16.306  INFO [money-api,,] 8948 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-08-03 22:14:16.769  INFO [money-api,,] 8948 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2023-08-03 22:14:35.723  INFO [money-api,,] 8948 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-03 22:14:35.765  INFO [money-api,,] 8948 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLInnoDBDialect
+2023-08-03 22:14:35.793  INFO [money-api,,] 8948 --- [           main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2023-08-03 22:14:35.867  INFO [money-api,,] 8948 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-03 22:14:35.868  INFO [money-api,,] 8948 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-03 22:14:36.127  INFO [money-api,,] 8948 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
     0 nanoseconds spent acquiring 0 JDBC connections;
     0 nanoseconds spent releasing 0 JDBC connections;
     0 nanoseconds spent preparing 0 JDBC statements;
@@ -113,7 +119,7 @@ Database is up to date, no changesets to execute
     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-2023-08-03 22:14:16.776  INFO [money-api,,] 8948 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2023-08-03 22:14:36.137  INFO [money-api,,] 8948 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
     0 nanoseconds spent acquiring 0 JDBC connections;
     0 nanoseconds spent releasing 0 JDBC connections;
     0 nanoseconds spent preparing 0 JDBC statements;
@@ -125,37 +131,13 @@ Database is up to date, no changesets to execute
     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-2023-08-03 22:14:16.964  INFO [money-api,,] 8948 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
-    0 nanoseconds spent acquiring 0 JDBC connections;
-    0 nanoseconds spent releasing 0 JDBC connections;
-    0 nanoseconds spent preparing 0 JDBC statements;
-    0 nanoseconds spent executing 0 JDBC statements;
-    0 nanoseconds spent executing 0 JDBC batches;
-    0 nanoseconds spent performing 0 L2C puts;
-    0 nanoseconds spent performing 0 L2C hits;
-    0 nanoseconds spent performing 0 L2C misses;
-    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
-    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
-}
-2023-08-03 22:14:16.975  INFO [money-api,,] 8948 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
-    0 nanoseconds spent acquiring 0 JDBC connections;
-    0 nanoseconds spent releasing 0 JDBC connections;
-    0 nanoseconds spent preparing 0 JDBC statements;
-    0 nanoseconds spent executing 0 JDBC statements;
-    0 nanoseconds spent executing 0 JDBC batches;
-    0 nanoseconds spent performing 0 L2C puts;
-    0 nanoseconds spent performing 0 L2C hits;
-    0 nanoseconds spent performing 0 L2C misses;
-    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
-    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
-}
-2023-08-03 22:14:18.603  INFO [money-api,,] 8948 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-08-03 22:14:18.702 DEBUG [money-api,,] 8948 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2023-08-03 22:14:18.804 DEBUG [money-api,,] 8948 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
-2023-08-03 22:14:19.052 DEBUG [money-api,,] 8948 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2023-08-03 22:14:19.141 DEBUG [money-api,,] 8948 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2023-08-03 22:14:25.153  INFO [money-api,,] 8948 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 27 endpoint(s) beneath base path '/actuator'
-2023-08-03 22:14:25.344 DEBUG [money-api,,] 8948 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-08-03 22:14:37.084  INFO [money-api,,] 8948 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-03 22:14:37.115 DEBUG [money-api,,] 8948 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-08-03 22:14:37.171 DEBUG [money-api,,] 8948 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-08-03 22:14:37.327 DEBUG [money-api,,] 8948 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-08-03 22:14:37.353 DEBUG [money-api,,] 8948 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-08-03 22:14:40.160  INFO [money-api,,] 8948 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 27 endpoint(s) beneath base path '/actuator'
+2023-08-03 22:14:40.282 DEBUG [money-api,,] 8948 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 
 ============================
@@ -2657,29 +2639,9 @@ Unconditional classes:
 
 
 
-2023-08-03 22:14:25.359  INFO [money-api,,] 8948 --- [           main] c.c.money.AccountServiceIntegrationTest  : Started AccountServiceIntegrationTest in 12.191 seconds (JVM running for 47.946)
-2023-08-03 22:14:25.374  INFO [money-api,,] 8948 --- [           main] com.chris.money.services.AccountService  : Creating account: {}
-2023-08-03 22:14:25.406 DEBUG [money-api,,] 8948 --- [           main] org.hibernate.SQL                        : insert into account (account_number, balance) values (?, ?)
-Hibernate: insert into account (account_number, balance) values (?, ?)
-2023-08-03 22:14:25.416  INFO [money-api,,] 8948 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
-    441200 nanoseconds spent acquiring 1 JDBC connections;
-    0 nanoseconds spent releasing 0 JDBC connections;
-    1908400 nanoseconds spent preparing 1 JDBC statements;
-    4043500 nanoseconds spent executing 1 JDBC statements;
-    0 nanoseconds spent executing 0 JDBC batches;
-    0 nanoseconds spent performing 0 L2C puts;
-    0 nanoseconds spent performing 0 L2C hits;
-    0 nanoseconds spent performing 0 L2C misses;
-    190400 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
-    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
-}
-2023-08-03 22:14:25.424 DEBUG [money-api,,] 8948 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@47fd0905, started on Thu Aug 03 22:14:13 EAT 2023
-2023-08-03 22:14:25.428  INFO [money-api,,] 8948 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-08-03 22:14:25.431  INFO [money-api,,] 8948 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-08-03 22:14:25.432  INFO [money-api,,] 8948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-08-03 22:14:25.452  INFO [money-api,,] 8948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-08-03 22:14:40.286  INFO [money-api,,] 8948 --- [           main] com.chris.money.AccountServiceUnitTest   : Started AccountServiceUnitTest in 6.559 seconds (JVM running for 62.872)
+2023-08-03 22:14:40.335  INFO [money-api,,] 8948 --- [           main] com.chris.money.services.AccountService  : Creating account: {}
 ]]></system-out>
   </testcase>
-  <testcase name="testGetAccountById_ExistingId_ReturnsAccount" classname="com.chris.money.AccountServiceIntegrationTest" time="0.003"/>
-  <testcase name="testGetAccountById_NonExistingId_ReturnsNull" classname="com.chris.money.AccountServiceIntegrationTest" time="0.002"/>
+  <testcase name="testGetAccountById" classname="com.chris.money.AccountServiceUnitTest" time="0"/>
 </testsuite>

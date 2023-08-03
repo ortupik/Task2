@@ -1,4 +1,4 @@
-package com.chris.money;
+package com.chris.money.services;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.stereotype.Service;
 
+import com.chris.money.Application;
 import com.chris.money.domain.Account;
 import com.chris.money.exceptions.InsufficientBalanceException;
 import com.chris.money.exceptions.InvalidTransferException;

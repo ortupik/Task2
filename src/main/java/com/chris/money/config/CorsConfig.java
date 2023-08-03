@@ -9,11 +9,11 @@ public class CorsConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-		/*registry.addMapping("/**").allowedOrigins("*") // Replace * with your allowed origins (e.g.,
+		registry.addMapping("/**").allowedOrigins("*") // Replace * with your allowed origins (e.g.,
 														// "http://localhost:3000")
 				.allowedMethods("GET", "POST", "PUT", "DELETE") // Allowed HTTP methods
 				.allowedHeaders("*") // Allowed request headers
 				.allowCredentials(true) // Allow credentials like cookies
-				.maxAge(3600); // Max age of the CORS pre-flight request cache (in seconds)*/
+				.maxAge(3600); // Max age of the CORS pre-flight request cache (in seconds)
 	}
 }

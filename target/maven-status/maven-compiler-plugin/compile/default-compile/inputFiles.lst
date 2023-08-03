@@ -5,10 +5,8 @@ C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\mone
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\controllers\AccountController.java
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\config\CorsConfig.java
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\controllers\TransferController.java
-C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\security\SecurityUtils.java
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\repositories\TransferRepository.java
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\requests\AccountCreateRequest.java
-C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\security\AuthoritiesConstants.java
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\requests\TransferRequest.java
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\services\AccountService.java
 C:\Users\Pchemut\Videos\property\money-transfer-api\src\main\java\com\chris\money\services\TransferService.java
